@@ -38,6 +38,16 @@ public class DMComponent {
 		}
 	}
 	
+	public void removeList(String name) {
+		int index = getIndexForList(name);
+		if (index == -1)
+			IOComponent.getComponent().output("List " + name + " does not exist.\n");
+		else {
+			lol.clear();
+			IOComponent.getComponent().output(name + " succesfully deleted.\n");
+		}
+	}
+	
 	/**
 	 * Adds a new element to a particular list.
 	 * @param name the name of the list
